@@ -1,0 +1,16 @@
+info:
+    app:
+        version: 1.0
+server:
+    port: 9105
+spring:
+    application:
+        name: admin-service
+    boot:
+        admin:
+            discovery:
+                converter:
+                    management-context-path: /actuator
+            ui:
+                brand: Admin microservices
+                title: Admin microservices

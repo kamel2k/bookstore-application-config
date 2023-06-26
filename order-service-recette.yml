@@ -1,0 +1,29 @@
+eureka:
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://discovery-service:8070/eureka/
+    instance:
+        preferIpAddress: true
+info:
+    app:
+        version: 1.0
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+server:
+    port: 9090
+spring:
+    application:
+        name: order-service
+    boot:
+        admin:
+            client:
+                instance:
+                    name: order-service
+                url: http://admin-service:9105
+    datasource:
+        url: jdbc:h2:mem:orderdb

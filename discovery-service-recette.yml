@@ -1,0 +1,21 @@
+eureka:
+    client:
+        fetchRegistry: false
+        registerWithEureka: false
+        serviceUrl:
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    instance:
+        hostname: discovery-service
+    server:
+        waitTimeInMsWhenSyncEmpty: 5
+server:
+    port: 8070
+spring:
+    application:
+        name: discovery-service
+    boot:
+        admin:
+            client:
+                instance:
+                    name: discovery-service
+                url: http://admin-deployment.bookstore.svc.cluster.local:9105
