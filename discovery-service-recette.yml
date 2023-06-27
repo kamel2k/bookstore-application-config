@@ -18,4 +18,6 @@ spring:
             client:
                 instance:
                     name: discovery-service
+                    prefer-ip: 'true'
                 url: http://admin-deployment.bookstore.svc.cluster.local:9105
+                auto-registration: 'true'
