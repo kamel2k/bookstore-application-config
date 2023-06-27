@@ -27,7 +27,9 @@ spring:
             client:
                 instance:
                     name: gateway-service
+                    prefer-ip: 'true'
                 url: http://admin-deployment.bookstore.svc.cluster.local:9105
+                auto-registration: 'true'
     cloud:
         gateway:
             discovery:

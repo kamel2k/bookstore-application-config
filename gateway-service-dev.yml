@@ -27,7 +27,9 @@ spring:
             client:
                 instance:
                     name: gateway-service
+                    prefer-ip: 'true'
                 url: http://localhost:9105
+                auto-registration: 'true'
     cloud:
         gateway:
             discovery:

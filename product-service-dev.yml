@@ -24,7 +24,9 @@ spring:
             client:
                 instance:
                     name: product-service
+                    prefer-ip: 'true'
                 url: http://localhost:9105
+                auto-registration: 'true'
     datasource:
         url: jdbc:h2:mem:productdb
     zipkin:
