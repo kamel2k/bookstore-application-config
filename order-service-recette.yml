@@ -3,7 +3,7 @@ eureka:
         fetchRegistry: true
         registerWithEureka: true
         serviceUrl:
-            defaultZone: http://discovery-service:8070/eureka/
+            defaultZone: http://discovery-deployment.bookstore.svc.cluster.local:8070/eureka/
     instance:
         preferIpAddress: true
 info:
@@ -24,6 +24,10 @@ spring:
             client:
                 instance:
                     name: order-service
-                url: http://admin-service:9105
+                url: http://admin-deployment.bookstore.svc.cluster.local:9105
     datasource:
-        url: jdbc:h2:mem:orderdb
+        url: jdbc:h2:mem:productdb
+    zipkin:
+        baseUrl: http://zipkin-deployment.bookstore.svc.cluster.local:9411/
+        service:
+            name: order-service

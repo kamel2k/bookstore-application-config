@@ -3,7 +3,7 @@ eureka:
         fetchRegistry: true
         registerWithEureka: true
         serviceUrl:
-            defaultZone: http://discovery-service:8070/eureka/
+            defaultZone: http://discovery-deployment.bookstore.svc.cluster.local:8070/eureka/
     instance:
         preferIpAddress: true
 info:
@@ -27,7 +27,7 @@ spring:
             client:
                 instance:
                     name: gateway-service
-                url: http://admin-service:9105
+                url: http://admin-deployment.bookstore.svc.cluster.local:9105
     cloud:
         gateway:
             discovery:
