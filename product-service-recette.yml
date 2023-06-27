@@ -16,9 +16,12 @@ management:
                 include: '*'
 server:
     port: 8080
+    shutdown: graceful
 spring:
     application:
         name: product-service
+    lifecycle:
+        timeout-per-shutdown-phase: 30s
     boot:
         admin:
             client:
