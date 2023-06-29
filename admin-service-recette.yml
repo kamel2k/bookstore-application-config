@@ -14,3 +14,9 @@ spring:
             ui:
                 brand: Admin microservices
                 title: Admin microservices
+    cloud:
+        kubernetes:
+            discovery:
+                all-namespace: true
+                serviceLabels:
+                    spring-boot: true
