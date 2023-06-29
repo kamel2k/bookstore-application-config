@@ -31,7 +31,9 @@ spring:
                 url: http://admin-deployment.bookstore.svc.cluster.local:9105
                 auto-registration: 'true'
     datasource:
-        url: jdbc:h2:mem:productdb
+        username: testUser
+        url: jdbc:postgresql://postgresdb.bookstore.svc.cluster.local:5432/testDB
+        password: testPassword
     zipkin:
         baseUrl: http://zipkin-deployment.bookstore.svc.cluster.local:9411/
         service:
